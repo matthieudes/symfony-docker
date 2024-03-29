@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PublicController!{% endblock %}
+
+{% block stylesheets %}
+<style>
+div{
+    background-color:#007791;
+}
+h3{
+    color: darkblue ;
+}
+</style>
+{% endblock %}
+{% block body %}
+    {% for article in articles %}
+    <div>
+        <h1>{{article.title}}</h1>
+        <h3>{{article.auteur}}</h3>
+    </div>
+    {% endfor %}
+{% endblock %}
