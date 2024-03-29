@@ -15,8 +15,11 @@ h3{
 {% block body %}
     {% for article in articles %}
     <div>
-        <h1>{{article.title}}</h1>
+        <h1>
+            <a href="{{ path('app_article',{id: article.id}) }}">{{article.title}}</a>
+        </h1>
         <h3>{{article.auteur}}</h3>
+        <h4>{{article.date|date("m/d/Y")}}</h4>
     </div>
     {% endfor %}
 {% endblock %}

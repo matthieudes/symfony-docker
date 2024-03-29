@@ -36,13 +36,13 @@ class PublicController extends AbstractController
         ]);
     }
 
-    #[Route('/article/{id}', name: 'app_artiste')]
+    #[Route('/article/{id}', name: 'app_article')]
     public function article(int $id): Response
     {
-        $articles =$this->articleRepository->find($id);
-        $commentaires = $articles ->getCommentaire();
+        $article =$this->articleRepository->find($id);
+        $commentaires = $article ->getCommentaire();
         return $this->render('public/article.html.twig', [
-            'articles' => $articles,
+            'articles' => $article,
             'commentaires' => $commentaires,
         ]);
     }

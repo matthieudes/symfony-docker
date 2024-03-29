@@ -2,6 +2,8 @@
 
 {% block title %}Hello PublicController!{% endblock %}
 
+
+
 {% block stylesheets %}
 <style>
 div{
@@ -13,13 +15,17 @@ h3{
 </style>
 {% endblock %}
 {% block body %}
+<a href="{{ path('app_accueil') }}">Homepage</a>
     <div>
         <h1>{{articles.title}}</h1>
-        <h3>{{articles.auteur}}
+        <h3>{{articles.auteur}}</h3>
+        <h4>{{articles.date|date("m/d/Y")}}</h4>
+    </div>
     {% for commentaire in commentaires %}
     <div>
-        <h1>{{commentaire.texte}}</h1>
+        <h2>{{commentaire.texte}}</h2>
         <h3>{{commentaire.auteur}}</h3>
+        <h4>{{commentaire.date|date("m/d/Y")}}</h4>
     </div>
     {% endfor %}
 {% endblock %}
