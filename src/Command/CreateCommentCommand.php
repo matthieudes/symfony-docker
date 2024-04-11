@@ -15,7 +15,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(
     name: 'app:createComment',
-    description: 'Add a short description for your command',
+    description: 'Ajoute un commentaire à un article',
 )]
 
 class CreateCommentCommand extends Command
