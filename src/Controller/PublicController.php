@@ -9,18 +9,6 @@ use App\Repository\ArticleRepository;
 
 class PublicController extends AbstractController
 {
-    //1 ArticleRepositoryà ajouter avec autowiring
-    //2 créer une route accueil( qui retourne les articles)
-    //3 qui va charger les articles
-    //4 on passe les articles à la vue twig 
-    //5 modifier la vue twig pour rendre les articles visibles
-
-    //6 créer une autre route article qui va afficher un article avec ses commentaires
-    //7 charger un article avec ses comm grâce à articleREpository 
-    //8 passer les infos à la vue twig 
-    //9 modifier la vue twig
-    
-    // créer  un lien dans la vue twig accueil, pour aller sur la route article 
     private ArticleRepository $articleRepository;
     
     public function __construct(ArticleRepository $articleRepository){
